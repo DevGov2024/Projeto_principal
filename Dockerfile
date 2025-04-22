@@ -1,12 +1,15 @@
 # Usar uma imagem base com Java
-FROM openjdk:21-jdk-alpine
+FROM openjdk:21-jdk
 
 
 
 WORKDIR /app
 
+COPY target/trajeto-0.0.1-SNAPSHOT.jar app.jar
 
-COPY target/*.jar app.jar
+
+
+
 
 
 
