@@ -1,0 +1,38 @@
+Projeto: Pipeline de CI/CD com Azure DevOps, GitHub e Docker
+Descrição
+Este projeto demonstra a criação de um pipeline de integração contínua (CI) e entrega contínua (CD) utilizando Azure DevOps, GitHub e Docker. A aplicação foi containerizada para garantir portabilidade, escalabilidade e consistência entre ambientes.
+Tecnologias Utilizadas
+Azure DevOps Pipelines
+GitHub
+Docker
+Docker Compose
+Maven
+Funcionalidades do Pipeline
+Compilação automática do código Java usando Maven.
+Empacotamento da aplicação em um arquivo .jar.
+Construção de imagem Docker e publicação em container registry.
+Orquestração local usando Docker Compose.
+Simulação de ambientes de staging e produção.
+Estrutura do Projeto
+cssCopiarEditarProjetoPrincipalGptTeste/
+├── trajeto/
+│   ├── src/
+│   ├── pom.xml│   ├── Dockerfile
+│   └── docker-compose.yml├── azure-pipelines.yml└── README.md 
+Como Executar Localmente
+Clone o repositório:
+Compile o projeto usando Maven:
+Construa a imagem Docker:
+Execute com Docker Compose:
+Pipeline no Azure DevOps
+O arquivo azure-pipelines.yml configura o CI/CD:
+Build com Maven
+Docker build e push
+Orquestração usando Docker Compose
+Service Connection necessária: docker-hub-connection
+Autor
+Vinicius Pierre
+bashCopiarEditardocker-compose -f trajeto/docker-compose.yml up
+bashCopiarEditardocker build -t trajeto-app:latest -f trajeto/Dockerfile .
+bashCopiarEditarmvn clean package
+bashCopiarEditargit clone https:/
